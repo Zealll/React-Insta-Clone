@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import Comment from './CommentSection'
 
 function PostContainer(props) {
     if (!props.data.length) {
@@ -11,7 +12,7 @@ function PostContainer(props) {
                     <div className='userDisplay' >
                      <img src={poster.thumbnailUrl} alt={`${poster.username}'s profile pic`}></img> <p><strong>{poster.username}</strong></p>
                     </div>
-                    <div classNmae='postImage'>
+                    <div className='postImage'>
                         <img src={poster.imageUrl} alt={`${poster.username}'s img`}></img>
                     </div>
                     <div className="like-comment">
@@ -20,6 +21,9 @@ function PostContainer(props) {
                     </div>
                     <div className='likes'>
                         {poster.likes}
+                    </div>
+                    <div>
+                       <Comment comments={poster.comments}/>
                     </div>
 
                 </div>
