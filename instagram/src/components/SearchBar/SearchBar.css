@@ -1,0 +1,26 @@
+.searchBar {
+    display: flex;
+    justify-content: space-between;
+    margin: 12px;
+}
+
+.searchBar input {
+    border-radius: 5px;
+    border: 1px solid rgb(151, 151, 151);
+    background-color: rgb(247, 245, 245);
+    margin-top: 8px;
+}
+
+.instagramLogo {
+    width: 160px;
+    height: 40px;
+}
+
+.navigation {
+    width: 160px;
+}
+
+.navigation img {
+    width: 25px;
+    margin: 4px;
+}

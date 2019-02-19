@@ -1,12 +1,14 @@
 import React from 'react';
+import './CommentSection.css'
+
 
 
 const Comment = props => {
     return (
-        <div>
+        <div className='commentSection'>
             {props.comments.map(individualCommenter => (
                 <div className='comment'>
-                    {individualCommenter.username}
+                    <strong>{individualCommenter.username}</strong>
                     {individualCommenter.text}
                 </div>)
             )}

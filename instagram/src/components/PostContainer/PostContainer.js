@@ -1,5 +1,8 @@
 import React from 'react';
-import Comment from './CommentSection'
+import Comment from '../CommentSection/CommentSection'
+import './PostContainer.css'
+import likebutton from './images/likebutton.PNG'
+import commentbutton from './images/commentbutton.PNG'
 
 function PostContainer(props) {
     if (!props.data.length) {
@@ -16,8 +19,8 @@ function PostContainer(props) {
                         <img src={poster.imageUrl} alt={`${poster.username}'s img`}></img>
                     </div>
                     <div className="like-comment">
-                        <img src='#' alt='like button'></img>
-                        <img src='#' alt='comment button'></img>
+                        <img src={likebutton} alt='like button'></img>
+                        <img src={commentbutton} alt='comment button'></img>
                     </div>
                     <div className='likes'>
                         {poster.likes}
