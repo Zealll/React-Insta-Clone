@@ -1,0 +1,37 @@
+.container {
+    width: 100%;
+}
+
+.userDisplay {
+    display: flex;
+    height: 60px;
+}
+
+.userDisplay img {
+    border-radius: 500px;
+    width: 35px;
+    height: 35px;
+    margin: 12px;
+}
+
+.postImage img {
+    width: 100%;
+    max-height: 400px;
+}
+
+.like-comment {
+    display: flex;
+    margin: 12px;
+}
+
+.like-comment img {
+    width: 30px;
+    height: 30px;
+    margin: 12px;
+    margin-bottom: 0;
+}
+
+.likes {
+    display: flex;
+    margin: 12px;
+}

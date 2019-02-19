@@ -1,0 +1,20 @@
+.comment {
+    display: flex;
+    margin: 12px;
+}
+
+.comment strong {
+    margin-right: 8px;
+}
+
+.commentSection input {
+    border: none;
+    border-top: 1px solid rgb(148, 143, 143);;
+    width: 92%;
+    padding: 12px;
+}
+
+.commentSection p {
+    text-align: start;
+    margin-left: 13px;
+}
