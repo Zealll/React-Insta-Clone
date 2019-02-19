@@ -13,3 +13,8 @@
     width: 92%;
     padding: 12px;
 }
+
+.commentSection p {
+    text-align: start;
+    margin-left: 13px;
+}

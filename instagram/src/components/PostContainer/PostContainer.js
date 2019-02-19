@@ -26,7 +26,7 @@ function PostContainer(props) {
                         {poster.likes}
                     </div>
                     <div>
-                       <Comment comments={poster.comments}/>
+                       <Comment comments={poster.comments} timestamp={poster.timestamp}/>
                     </div>
 
                 </div>
