@@ -9,7 +9,7 @@ class Comment extends React.Component {
         super(props);
         this.state = {
             comments: props.comments,
-            // text:''
+            text:''
         }
     }
 
@@ -31,7 +31,6 @@ class Comment extends React.Component {
         
     }
     render() {
-        console.log(this.state.comments)
         return (
             <div className='commentSection'>
                 {this.state.comments.map(individualCommenter => (

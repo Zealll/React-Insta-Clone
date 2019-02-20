@@ -9,26 +9,17 @@ class App extends Component {
     super();
     this.state ={
       data: dummyData,
-      likes: dummyData.likes
     }
   }
 
-  addLikes = () => {
-   this.setState({
-     likes: this.state.likes + 1
-   })
-  }
   
-  
-  
-  
-  render() {
+   render() {
     return (
       <div className="App">
         <SearchBar />
-        <PostContainer data={this.state.data} likes={this.addLikes}/>
-        
+        <PostContainer data={this.state.data} likes={this.likes}/>
       </div>
+      
     );
   }
 }
