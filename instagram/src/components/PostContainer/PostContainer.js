@@ -17,7 +17,7 @@ class PostContainer extends React.Component {
         }
         return (
             <>
-                {this.state.data.map(poster => (
+                {this.props.data.map(poster => (
                     <div className='container' key={poster.timestamp}>
                         <div className='userDisplay' >
                          <img src={poster.thumbnailUrl} alt={`${poster.username}'s profile pic`}></img> <p><strong>{poster.username}</strong></p>
