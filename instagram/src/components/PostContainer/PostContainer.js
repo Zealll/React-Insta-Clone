@@ -19,7 +19,7 @@ function PostContainer(props) {
                         <img src={poster.imageUrl} alt={`${poster.username}'s img`}></img>
                     </div>
                     <div className="like-comment">
-                        <img src={likebutton} alt='like button'></img>
+                        <img src={likebutton}  onClick={props.likes} alt='like button'></img>
                         <img src={commentbutton} alt='comment button'></img>
                     </div>
                     <div className='likes'>
