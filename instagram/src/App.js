@@ -8,15 +8,23 @@ class App extends Component {
   constructor() {
     super();
     this.state ={
-      data: [],
+      data: dummyData,
       filteredUsers: [],
-      searchInput: [],
+      searchInput: '',
     }
   }
 
-  componentDidMount(){
+  changeHandler = e => {
     this.setState({
-      data: dummyData
+      [e.target.name]: e.target.value
+    })
+  }
+
+  searchHandler = e => {
+    this.changeHandler(e)
+    this.setState((prevState) => {
+      const filteredUsersArray =  prevState.data.filter(post => post.username.includes(prevState.searchInput))
+      return {filteredUsers: filteredUsersArray}
     })
   }
 
@@ -25,8 +33,8 @@ class App extends Component {
      console.log(this.state.data)
     return (
       <div className="App">
-        <SearchBar />
-        <PostContainer data={this.state.data}/>
+        <SearchBar searchHandler={this.searchHandler} searchInput={this.state.searchInput}/>
+        <PostContainer data={this.state.filteredUsers.length > 0 ? this.state.filteredUsers : this.state.data}/>
       </div>
       
     );

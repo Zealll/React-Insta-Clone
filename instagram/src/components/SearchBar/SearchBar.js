@@ -10,7 +10,12 @@ const SearchBar = props => {
         <div className='searchBar'>
             <img src={Instagramlogo} className='instagramLogo' alt="instagram logo"></img>
             <form>
-                <input placeholder='search'></input>
+                <input 
+                placeholder='search'
+                value={props.searchInput}
+                onChange={props.searchHandler}
+                name="searchInput"
+                ></input>
             </form>
             <div className='navigation'>
                 <img src={ftht} className='locationButton' alt='location'></img>
