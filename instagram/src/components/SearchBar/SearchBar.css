@@ -24,4 +24,5 @@
 .navigation img {
     width: 25px;
     margin: 4px;
+    cursor: pointer;
 }

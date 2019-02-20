@@ -9,19 +9,34 @@ class App extends Component {
     super();
     this.state ={
       data: dummyData,
+      filteredUsers: [],
+      searchInput: '',
     }
   }
+
+  changeHandler = e => {
+    this.setState({
+      [e.target.name]: e.target.value
+    })
+  }
+
+  searchHandler = e => {
+    this.changeHandler(e)
+    this.setState((prevState) => {
+      const filteredUsersArray =  prevState.data.filter(post => post.username.includes(prevState.searchInput))
+      return {filteredUsers: filteredUsersArray}
+    })
+  }
+
   
-  
-  
-  
-  render() {
+   render() {
+     console.log(this.state.data)
     return (
       <div className="App">
-        <SearchBar />
-        <PostContainer data={this.state.data}/>
-        
+        <SearchBar searchHandler={this.searchHandler} searchInput={this.state.searchInput}/>
+        <PostContainer data={this.state.filteredUsers.length > 0 ? this.state.filteredUsers : this.state.data}/>
       </div>
+      
     );
   }
 }

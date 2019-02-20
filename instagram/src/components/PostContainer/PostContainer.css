@@ -21,7 +21,6 @@
 
 .like-comment {
     display: flex;
-    margin: 12px;
 }
 
 .like-comment img {
@@ -29,6 +28,7 @@
     height: 30px;
     margin: 12px;
     margin-bottom: 0;
+    cursor: pointer;
 }
 
 .likes {
