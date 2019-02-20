@@ -8,16 +8,25 @@ class App extends Component {
   constructor() {
     super();
     this.state ={
-      data: dummyData,
+      data: [],
+      filteredUsers: [],
+      searchInput: [],
     }
+  }
+
+  componentDidMount(){
+    this.setState({
+      data: dummyData
+    })
   }
 
   
    render() {
+     console.log(this.state.data)
     return (
       <div className="App">
         <SearchBar />
-        <PostContainer data={this.state.data} likes={this.likes}/>
+        <PostContainer data={this.state.data}/>
       </div>
       
     );
