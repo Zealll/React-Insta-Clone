@@ -12,7 +12,7 @@ class PostContainer extends React.Component {
     }
 
     render() {
-        if (!this.state.data.length) {
+        if (!this.state.data) {
             return <h1>Loading Your Post...</h1>
         }
         return (
@@ -20,7 +20,7 @@ class PostContainer extends React.Component {
                 {this.props.data.map(poster => (
                     <div className='container' key={poster.timestamp}>
                         <div className='userDisplay' >
-                         <img src={poster.thumbnailUrl} alt={`${poster.username}'s profile pic`}></img> <p><strong>{poster.username}</strong></p>
+                            <img src={poster.thumbnailUrl} alt={`${poster.username}'s profile pic`}></img> <p><strong>{poster.username}</strong></p>
                         </div>
                         <div className='postImage'>
                             <img src={poster.imageUrl} alt={`${poster.username}'s img`}></img>
@@ -29,7 +29,7 @@ class PostContainer extends React.Component {
                             <LikeButton likes={poster.likes} />
                         </div>
                         <div>
-                           <Comment comments={poster.comments} timestamp={poster.timestamp}/>
+                            <Comment comments={poster.comments} timestamp={poster.timestamp}/>
                         </div>
     
                     </div>

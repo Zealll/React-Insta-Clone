@@ -6,21 +6,29 @@ class LikeButton extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            likes: props.likes
+            likes: props.likes,
+            likeToggle: false
         }
     }
 
-    addLikes = () => {
-        let likes = this.state.likes + 1;
-        this.setState({
-          likes
-        })
-      }
+    addLike = () => {
+        if (this.state.likeToggle == false) {
+            this.setState({ 
+                likes: this.state.likes + 1,
+                likeToggle: true 
+            })
+        } else {
+            this.setState({ 
+                likes: this.state.likes - 1,
+                likeToggle: false 
+            })
+        }
+    }
 
     render() {
         return (
             <> <div className='like-comment'>
-                    <img src={likebutton}  onClick={this.addLikes} alt='like button'></img>
+                    <img src={likebutton}  onClick={this.addLike} alt='like button'></img>
                     <img src={commentbutton} alt='comment button'></img>
                 </div>
                 <div className='likes'>

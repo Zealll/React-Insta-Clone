@@ -8,10 +8,14 @@ class App extends Component {
   constructor() {
     super();
     this.state ={
-      data: dummyData,
+      data: [],
       filteredUsers: [],
       searchInput: '',
     }
+  }
+
+  componentDidMount() {
+    this.setState({data: dummyData})
   }
 
   changeHandler = e => {
