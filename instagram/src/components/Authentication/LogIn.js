@@ -15,8 +15,10 @@ class Login extends Component {
   };
 
   handleLoginSubmit = e => {
-    const user = this.state.username;
-    localStorage.setItem('user', user);
+    const username = this.state.username;
+    const password = this.state.password
+    localStorage.setItem('username', username);
+    localStorage.setItem('password', password);
     window.location.reload();
   };
 
