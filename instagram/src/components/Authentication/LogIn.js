@@ -42,7 +42,7 @@ class Login extends Component {
             onChange={this.handleInputChange}
           />
           <br />
-          <button color="success" size="large" onClick={this.handleLoginSubmit}>
+          <button onClick={this.handleLoginSubmit}>
             Log In
           </button>
         

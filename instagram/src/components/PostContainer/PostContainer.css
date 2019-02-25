@@ -4,7 +4,9 @@
 
 .userDisplay {
     display: flex;
+    align-items: center;
     height: 60px;
+    width: 100%;
 }
 
 .userDisplay img {
@@ -12,6 +14,9 @@
     width: 35px;
     height: 35px;
     margin: 12px;
+}
+.userDisplay p {
+    margin-top: 8px;
 }
 
 .postImage img {

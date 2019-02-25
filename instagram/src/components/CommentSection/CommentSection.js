@@ -20,13 +20,14 @@ class Comment extends React.Component {
             text: this.state.text,
         }
         this.setState({
-            comments:[...this.state.comments, newComment]
+            comments:[...this.state.comments, newComment],
+            text: ''
         })
     }
 
     changeHandler = e => {
         this.setState({
-            [e.target.name]: e.target.value
+            [e.target.name]: e.target.value,
         })
         
     }

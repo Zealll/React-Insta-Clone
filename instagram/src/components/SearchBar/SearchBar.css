@@ -1,8 +1,7 @@
 .searchBar {
     display: flex;
     justify-content: space-between;
-    margin: 12px;
-    border-bottom: 1px solid black;
+    /* margin: 12px; */
 }
 
 .searchBar input {
@@ -22,7 +21,7 @@
 }
 
 .navigation img {
-    width: 25px;
+    width: 30px;
     margin: 4px;
     cursor: pointer;
 }
